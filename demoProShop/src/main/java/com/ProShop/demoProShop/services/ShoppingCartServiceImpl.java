@@ -15,8 +15,8 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     @Override
-    public void addItem(int itemId) {
-        shoppingCart.addItems(itemId);
+    public void addItem(List<Integer> itemIds) {
+        shoppingCart.addItems(itemIds);
     }
 
     @Override

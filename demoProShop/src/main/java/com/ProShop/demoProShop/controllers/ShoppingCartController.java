@@ -13,7 +13,6 @@ import java.util.List;
 @RequestMapping("/order")
 public class ShoppingCartController {
 
-
     private final ShoppingCartService shoppingCartService;
 
     public ShoppingCartController(ShoppingCartService shoppingCartService) {
@@ -21,8 +20,8 @@ public class ShoppingCartController {
     }
 
     @GetMapping("/add")
-    public void addItemToCart(@RequestParam("ItemId") int itemId) {
-        shoppingCartService.addItem(itemId);
+    public void addItemToCart(@RequestParam("itemId") List<Integer> itemIds) {
+        shoppingCartService.addItem(itemIds);
     }
 
     @GetMapping("get")
